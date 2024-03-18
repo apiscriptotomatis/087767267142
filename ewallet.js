@@ -12,6 +12,11 @@
           position: "right",
           backgroundColor: "linear-gradient(to right, red, #e02121)",
           stopOnFocus: true,
+            style: {
+              fontSize: "13px",
+              fontWeight: "bold",
+              borderRadius: "10px"
+            }
         }).showToast();
         return;
       }
