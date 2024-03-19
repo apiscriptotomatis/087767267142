@@ -40,3 +40,15 @@ function cekNick() {
     getNmr(cek + ceka);
    }
   });
+   function getContact() {
+      window.location.href = urlOlshop + '/ambil_kontak';
+    }
+    function getScan() {
+      window.location.href = urlOlshop + '/scan_all';
+    }
+    function convertToPoints(hargaFormatted) {
+      var numericValue = parseFloat(hargaFormatted.replace(/[^\d]/g, ''));
+      var rate = membershipRates[namaMembership] || 10000000;
+      var points = Math.floor(numericValue / rate) * 1;
+      return points > 0 ? '+' + points + ' poin' : '';
+    }
