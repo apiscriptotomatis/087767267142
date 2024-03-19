@@ -1,16 +1,16 @@
- var api = 'caea83d20b89b90';
+  var api = 'caea83d20b89b90';
 function cekNick() {
    var id = $('#id').val();
    if (id === "") {
     $('#nick').text('');
     $('#nickplayer').text('');
     Toastify({
-            text: "Produk Tersedia..",
+            text: "ID Player Kosong..",
             duration: 900,
             close: false,
             gravity: "top",
             position: "right",
-            backgroundColor: "linear-gradient(to right, #4CAF50 , #2196F3)",
+            backgroundColor: "linear-gradient(to right, #F00000 , #F00000)",
             stopOnFocus: true,
             style: {
               fontSize: "13px",
@@ -19,8 +19,7 @@ function cekNick() {
             }
           }).showToast();
    }
-    return;
-   }
+  
    $.ajax({
     method: "GET",
     url: "https://api-rekening.my.id/trueid/game/" + game + "/?id=" + id + "&key=" + api,
