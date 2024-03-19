@@ -4,7 +4,21 @@ function cekNick() {
    if (id === "") {
     $('#nick').text('');
     $('#nickplayer').text('');
-    $('#emptyInputToast').toast('show');
+    Toastify({
+            text: "Produk Tersedia..",
+            duration: 900,
+            close: false,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "linear-gradient(to right, #4CAF50 , #2196F3)",
+            stopOnFocus: true,
+            style: {
+              fontSize: "13px",
+              fontWeight: "bold",
+              borderRadius: "10px"
+            }
+          }).showToast();
+   }
     return;
    }
    $.ajax({
