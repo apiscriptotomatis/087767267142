@@ -36,6 +36,7 @@ function cekNick() {
       } else {
         $('#nick').text(response.nickname);
         $('#nickplayer').text(response.nickname);
+        $('#stats').show();
       }
     },
     error: function () {
